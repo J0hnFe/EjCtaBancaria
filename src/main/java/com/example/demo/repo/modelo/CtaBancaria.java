@@ -34,10 +34,10 @@ public class CtaBancaria {
 	@JoinColumn(name = "cta_id_propietario")
 	private Propietario propietario;
 	
-	@OneToMany(mappedBy = "cuenta_bancaria_origen")
+	@OneToMany(mappedBy = "ctaBancariaOrigen")
 	private List<Transferencia> transferenciasO;
 	
-	@OneToMany(mappedBy = "cuenta_bancaria_destino")
+	@OneToMany(mappedBy = "ctaBancariaDestino")
 	private List<Transferencia> transferenciasD;
 
 	//Setters y Getters
@@ -97,7 +97,7 @@ public class CtaBancaria {
 	@Override
 	public String toString() {
 		return "CtaBancaria [id=" + id + ", numero=" + numero + ", saldo=" + saldo + ", tipo=" + tipo + ", propietario="
-				+ propietario + ", transferenciasO=" + transferenciasO + ", transferenciasD=" + transferenciasD + "]";
+				+ propietario + "]";
 	}
 		
 }
